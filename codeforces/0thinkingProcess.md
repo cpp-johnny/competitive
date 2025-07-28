@@ -39,3 +39,26 @@ s = able to b esolved
 we create p, v, t. accept inpiut and store thjem into tjheir own array.  then we do for i in range n, if p[i] + v[i] + t[i] >= 1, ++s. loop through until end. 
 
 at first i was thinking given this, then trasnpose 90 degree. split and store into p, v, t own array. then we do for i in range n, if p[i] + v[i] + t[i] >= 1, ++s. loop through until end. but then i realiose you can alrdy seperate the input into 3 since there is alrdy spaces lol.
+
+# 282A Bit++
+
+x = 0
+
+if in string found `+`, then ++x. else --x. 
+
+use `string::npos` which is a not found indicator. if `+` is not `not found` then it is foi=und. 
+
+
+# 50A Domino piling
+
+m * n / 2
+
+# 617A Elephant
+
+input n 
+
+x = 0;
+
+if n % 5 != 0, x = n/5 + 1, print x
+
+else print n / 5
