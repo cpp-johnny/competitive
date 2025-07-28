@@ -28,3 +28,25 @@ input n then find total sum s
 
 start a loop, for i < n-1, we take in number input x, and we subtratct that from sum s. when all is finished, we will be left with subtratcedt ans which is missing number. we use n-1 for this beavuse we need to find that one missingf number.
 
+
+# 3. Repetitions (1069)
+
+we have 2 things to kepe note of - current length and maximum lenght. both are set to 1, as a single str can also be the highest.
+start from 1, loop thorugh the length of the str with `.length()`
+if current matches the one before, current length ++. 
+we cmpare current length with max length, and we set max length the higher of the 2.
+else if current does not match previous, we set current length = 1.
+
+we take the higher of currentLen and maxLen so as to not accidentally erase the highest maxLen.
+Do not use `maxLen = currentLen;` as This overwrites maxLen every time even if currentLen got smaller.
+
+
+# 4. Increasing Array(1094)
+
+input n, create vector s to store the value. 
+x = 0 where x is moves required
+for i in num, compare current with previous.
+if s[i] < s[i-1], then x += s[i-1] - s[i]. change s[i] to s[i-1] as qn do not need it to be larger; it can be same no. 
+loop through all till end
+
+note: need to store array values inside vectors since we are modifying them. compared to 3. Repetition you dont. 
