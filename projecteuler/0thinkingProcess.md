@@ -9,7 +9,7 @@ one way i thinbk about solving this is: have a list of all fib number as x. then
 
 realise that every 3rd numebr is even.
 
-1, 1, `2`, 3, 5, `8`, 13, 21, `34`, 66, 89, 1`44`...
+1, 1, `2`, 3, 5, `8`, 13, 21, `34`, 66, 89, `144`...
 
 F(3), F(6), F(9) ... is even.
 
