@@ -1,6 +1,7 @@
 # 4A Watermelon
 
 if %2 = 0 --> YES, else NO.
+
 exception: 2 --> NO since 2/2 = 1 odd.
 
 # 71A Strings
@@ -17,10 +18,13 @@ cout << x[0] + x.length() + x.back()    // note that c++ dont accept x[:-1]
 m = lenght, n = breath.
 
 least square l1 for lenght = m/a and round up
+
 least squarte b1 for brteath = n/a and round up
+
 least suqwares = l1 * b1
 
 # 96A Football
 
 string s = 0. for n < size(), if (s[i] == s[i - 1]) , then s++; and if s >= 7, output "YES". and returns 0 (exit program)
+
 default condition is "NO"
