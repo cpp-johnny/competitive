@@ -120,3 +120,20 @@ to fix this can use a vector to store the numbers, and use to in range loops.
 remember to +1 to the i since qn says Numbers are numbered from 1 in the input order.
 
 lol im sure there would be a even more efificent and fast way to solve it but i want to eat dinner now, and it kinda works 😝😝
+
+
+## Optimised solution
+
+Got curious and wanted to find out what's a betetr solution.
+
+the new optimised solution is:
+
+1. start looping from beginning, collecting `odd_count`, `even_count`, `odd_index` and `even_index`. The `odd_index` and `even_index` only updates the fist time each appears. 
+
+2.After reading the first 3 elements, as soon as either `odd_count` or `even_count` hits 2, you know the majority.The other parity is the minority.
+
+3. You continue the loop, but you're not updating the index of the majority anymore. You only wait until the first element of the minority appears (if it hasn’t already), and then update the corresponding index once.
+
+4. From the last 2 if loops we can see that the moment the `odd/even_index` changed, we output the current index, which is the minority. 
+
+This solution has time complexity of `O(n)` and space complexity of `O(1)`. The previous solution is `O(n)` for both. 
