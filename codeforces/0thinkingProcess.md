@@ -4,11 +4,13 @@ The following is a short draft of my thinking process and planning when doing th
 
 If you find any errors or would like to suggest more efficient/better solutions feel free to do a pull request!
 
+
 # 4A Watermelon (800)
 
 if %2 = 0 --> YES, else NO.
 
 exception: 2 --> NO since 2/2 = 1 odd.
+
 
 # 71A Strings (800)
 
@@ -29,6 +31,7 @@ least squarte b1 for brteath = n/a and round up
 
 least suqwares = l1 * b1
 
+
 # 96A Football (900)
 
 string s = 0. for n < size(), if (s[i] == s[i - 1]) , then s++; and if s >= 7, output "YES". and returns 0 (exit program)
@@ -45,6 +48,7 @@ s = able to b esolved
 we create p, v, t. accept inpiut and store thjem into tjheir own array.  then we do for i in range n, if p[i] + v[i] + t[i] >= 1, ++s. loop through until end. 
 
 at first i was thinking given this, then trasnpose 90 degree. split and store into p, v, t own array. then we do for i in range n, if p[i] + v[i] + t[i] >= 1, ++s. loop through until end. but then i realiose you can alrdy seperate the input into 3 since there is alrdy spaces lol.
+
 
 # 282A Bit++ (800)
 
@@ -71,9 +75,17 @@ if n % 5 != 0, x = n/5 + 1, print x
 else print n / 5
 
 
-
 # 158A Next Round (800)
 
 n score, kth posiiton. create vector of score x. s is score
 
 for i in range n, compare if x[i] > x[k-1] since k starts from 0. if x[i] > x[k-1], then ++s. ensure x > 0 also. 
+
+
+# 1999A (800)
+
+at first i read the qn wrongly to  some inputs can be non 2 digit like 8 as shown in the example input. i was thinking of like of how to determine the length of the input and was like while n > 9 then run the code until i read closely the first number is the number of inputs later on lmao.
+
+The first idea to solve the problem is to use `.strip()` but i realisedf that c++ dont have.
+
+so use % and / to get remainder and quotient to split since it will always be 2 digits. when you / you get the front digit since it rounds down and when you % you get the remainder which is the back digit. then can add them up and cout it. honestly too troll. 
