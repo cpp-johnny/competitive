@@ -1,3 +1,10 @@
+# Thinking Process for Codeforces.
+
+The following is a short draft of my thinking process and planning when doing the questions. Questions are done in the following order. 
+
+If you find any errors or would like to suggest more efficient/better solutions feel free to do a pull request!
+
+
 # 1. Multiples of 3 and 5
 
 loop through from 1 to 1000, if number % 3 or %5 = 0, then add to sum. 

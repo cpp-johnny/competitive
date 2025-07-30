@@ -1,3 +1,10 @@
+# Thinking Process for Codeforces.
+
+The following is a short draft of my thinking process and planning when doing the questions. Questions are done in the following order. 
+
+If you find any errors or would like to suggest more efficient/better solutions feel free to do a pull request!
+
+
 # 1. Weird Algorithm (1068)
 
 if n=1 print 1.
