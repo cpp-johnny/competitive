@@ -1,4 +1,4 @@
-# Thinking Process for Codeforces.
+# Thinking Process for CSES problems.
 
 The following is a short draft of my thinking process and planning when doing the questions. Questions are done in the following order. 
 

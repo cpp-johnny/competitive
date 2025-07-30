@@ -1,4 +1,4 @@
-# Thinking Process for Codeforces.
+# Thinking Process for Project Euler.
 
 The following is a short draft of my thinking process and planning when doing the questions. Questions are done in the following order. 
 
