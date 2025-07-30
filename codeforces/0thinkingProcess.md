@@ -82,10 +82,41 @@ n score, kth posiiton. create vector of score x. s is score
 for i in range n, compare if x[i] > x[k-1] since k starts from 0. if x[i] > x[k-1], then ++s. ensure x > 0 also. 
 
 
-# 1999A (800)
+# 1999A A + B again? (800)
 
 at first i read the qn wrongly to  some inputs can be non 2 digit like 8 as shown in the example input. i was thinking of like of how to determine the length of the input and was like while n > 9 then run the code until i read closely the first number is the number of inputs later on lmao.
 
 The first idea to solve the problem is to use `.strip()` but i realisedf that c++ dont have.
 
 so use % and / to get remainder and quotient to split since it will always be 2 digits. when you / you get the front digit since it rounds down and when you % you get the remainder which is the back digit. then can add them up and cout it. honestly too troll. 
+
+
+# 25A IQ Test (1300)
+
+this is an iq test indeed. my firtst 1300 qn but seems fine so far ig. 
+
+My proposed solution is this:
+if s % 2 != 0, ++odd, else ++even
+
+if odd > even, 
+
+    if s % 2 != 0: 
+
+         cout s
+         ++odd
+
+else if even > odd,
+
+    if s % 2 =- 0:
+
+        cout s
+        ++even
+
+
+but this code outputs the numebr rather thann the index. 
+
+to fix this can use a vector to store the numbers, and use to in range loops. 
+
+remember to +1 to the i since qn says Numbers are numbered from 1 in the input order.
+
+lol im sure there would be a even more efificent and fast way to solve it but i want to eat dinner now, and it kinda works 😝😝
