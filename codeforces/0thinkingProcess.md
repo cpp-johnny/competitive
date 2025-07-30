@@ -62,3 +62,11 @@ x = 0;
 if n % 5 != 0, x = n/5 + 1, print x
 
 else print n / 5
+
+
+# 158A Next Round
+
+n, k 
+s
+
+for i in range n, compare if n[i] > k. if n[i] > k, then ++s. 
