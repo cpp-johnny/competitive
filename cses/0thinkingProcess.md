@@ -66,3 +66,24 @@ if s[i] < s[i-1], then x += s[i-1] - s[i]. change s[i] to s[i-1] as qn do not ne
 loop through all till end
 
 note: need to store array values inside vectors since it is resizable; int is not resizable. In comparison to 3.Repeitions you do not need to modify the array, so do not need to use vectors.
+
+
+# 5. Permutations (1070)
+
+given input, crteate vector and store all its numbers before it and itself in another vector. 
+
+some observations:
+
+1. any no. < 4 will result in NO SOLUTION. 
+
+2. Note that for `1` the ans will be `1`.
+
+3. for any numbers higher, we can split even and odd. 
+
+Exampple no. 5: `1, 3, 5, 2, 4` fufills it 
+
+Example no. 6: `1, 3, 5, 2, 4, 6` also fulfils it. 
+
+Since qn says `If there are several solutions, you may print any of them.` we will just go for the low hanging fruit of splitting into 2 😂 😂 😂 
+
+Lookinmg back at theiur analysis page, the code can be optiusmied to not store the odd and ecen into vectors, can just print it out directlyt.
