@@ -177,3 +177,13 @@ for 2 all bundle we can use trick to do ceil(n/m) * b
 
 in int division, n/m is rounded down. so to simulate ceil(n / m) with integers, we do $$ceil(n/m) = {(n+m-1)}/m$$
 
+
+# 110A Nearly Lucky Number
+
+read input as string, compare character 4 and 7 and others. count no. of 4 and 7. 
+
+total = count4 + count7 
+
+if total == 7 && (count7 != 0 || cout4 != 0), cout YES
+else if total == 4 && (count7 != 0 || cout4 != 0), cout YES
+else cout NO
