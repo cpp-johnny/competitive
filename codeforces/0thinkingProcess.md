@@ -137,3 +137,10 @@ the new optimised solution is:
 4. From the last 2 if loops we can see that the moment the `odd/even_index` changed, we output the current index, which is the minority. 
 
 This solution has time complexity of `O(n)` and space complexity of `O(1)`. The previous solution is `O(n)` for both. 
+
+
+# 69A Young Physicist (1000)
+
+takes x, y, z input and store them to x, y, z. 
+
+at the end check if x, y, z are all 0. if yes --> yes, else no
