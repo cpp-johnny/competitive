@@ -144,3 +144,36 @@ This solution has time complexity of `O(n)` and space complexity of `O(1)`. The 
 takes x, y, z input and store them to x, y, z. 
 
 at the end check if x, y, z are all 0. if yes --> yes, else no
+
+
+# 466A Cheap Travel (1200)
+
+interesting qn seemed ez at first.
+
+1 stop --> a
+
+m stops --> b
+
+need to take n times
+
+n, m, a, b
+
+lets call no. of times for 1 stop as x
+lets call no. of times for m stops as y
+
+whatever permutation of x and m will add up to n. try to take max of m first, then use the remainder for x? 
+
+1. x = n % m. 
+
+2. y = n / m.
+
+sum = y * b + x * a.
+
+hwoeevre the test case 3 suggests that sometimes buyinh buddle may be the cheapest
+
+so we can do for each test case - 1. all single 2. all bubnlde 3. mix. 
+
+for 2 all bundle we can use trick to do ceil(n/m) * b
+
+in int division, n/m is rounded down. so to simulate ceil(n / m) with integers, we do $$ceil(n/m) = {(n+m-1)}/m$$
+
