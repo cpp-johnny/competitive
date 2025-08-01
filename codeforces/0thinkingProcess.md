@@ -178,7 +178,7 @@ for 2 all bundle we can use trick to do ceil(n/m) * b
 in int division, n/m is rounded down. so to simulate ceil(n / m) with integers, we do $$ceil(n/m) = {(n+m-1)}/m$$
 
 
-# 110A Nearly Lucky Number
+# 110A Nearly Lucky Number (800)
 
 read input as string, compare character 4 and 7 and others. count no. of 4 and 7. 
 

@@ -12,3 +12,4 @@ If you find any errors or would like to suggest more efficient/better solutions 
 | codeforces | [cpp-johnny](https://codeforces.com/profile/cpp-johnny) | [submissions](https://codeforces.com/submissions/cpp-johnny) |
 | cses | [123qwertyuiop123](https://cses.fi/user/350608) |  [submissions](https://cses.fi/problemset/user/350608) |
 | project euler | 123qwertyuiop123 | submissions |
+| kattis | [cpp-johnny](https://open.kattis.com/users/cpp-johnny) | [submissions](https://open.kattis.com/users/cpp-johnny?tab=problems) |
