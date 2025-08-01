@@ -215,3 +215,8 @@ notice this is binary system.
 So we can just count no. of 1s as the position of the 1s represent the power it is at. 
 
 To do so we just decompose the number into its binary. 
+
+
+# 339A Helpful Maths (800)
+
+string s. create vector x where all the digits are at. for all character in s, add any non `+` into x, which are the numbers. then sort the numbers. then cout x and +. note this mistake --> dont just cout x, `+`. else will end up with 1+2+3+. so check if current index is size -1 which is last index, if it is wont cout the `+`. 
