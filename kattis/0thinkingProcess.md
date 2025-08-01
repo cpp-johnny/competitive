@@ -5,7 +5,7 @@ The following is a short draft of my thinking process and planning when doing th
 If you find any errors or would like to suggest more efficient/better solutions feel free to do a pull request!
 
 
-# 1. Basketball One-on-One
+# 1. Basketball One-on-One (1.4)
 
 read input as 2 parts - A/B and 1/2. 
 
@@ -35,3 +35,13 @@ int main() {
 ```
 
 Realise that when the game ends, it ends on the last person. So we can just print the last person instead lmao. 
+
+
+# 2 A Shortcut to What? (1.1)
+
+(n + 5) * 3 - 10
+
+
+# 3 A Terrible Fortress (1.2)
+
+sum all together
