@@ -187,3 +187,31 @@ total = count4 + count7
 if total == 7 && (count7 != 0 || cout4 != 0), cout YES
 else if total == 4 && (count7 != 0 || cout4 != 0), cout YES
 else cout NO
+
+# 479A Expression (1000)
+
+since the qn says brute force i will try to list out all possible:
+
+a + b*c
+a*b + c
+a * (b + c)
+(a + b) * c
+a * b * c
+a + b + c
+
+
+# 579A Counting Bacteria (1000)
+
+first bitmask qn.
+
+first convert all to binary. notice when they split, it is multiple of 2. So they can only exist as multiple of 2 and number 1. 
+
+e.g. 13 = 8 + 4 + 1 --> 2^3 + 2^2  + 1
+
+notice this is binary system. 
+
+13 = 1101 --> 3 `1`s
+
+So we can just count no. of 1s as the position of the 1s represent the power it is at. 
+
+To do so we just decompose the number into its binary. 
