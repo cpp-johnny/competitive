@@ -235,4 +235,35 @@ From what i understand, the beginning can be either 0s and 1s or nothing. Then e
 
 My approach weill be 
 
-as long as left no. != right number, then ignore. when reach when left no. = right no. then we print length of remaining 
+as long as left no. != right number, then ignore. when reach when left no. = right no. then we print length of remaining by doing right - left + 1
+
+
+# 1851B Parity Sort (800)
+
+very interesting qn, had to search for hints
+
+only able to sort if can exchnage 2 numbers of the same type (odd/even), and sort them to non decreasing. 
+
+one observation of NOs is that there is only one of the type. 
+
+No occurs when you have only one of the type that is not in order. if the one type say number 1 is at the start, then it is possible. 
+
+but how do we determimne if that is the case? maybe can split into 3 parts, sort each part, then compare all? idk
+
+the other observation of NOs is that the position of the lowest is not in front. eg 2 1 6 3 then NO since impssoible to shift.
+
+1. presence of only one no. of a type. if no
+2. split into 3 parts --> front
+
+???
+
+another approach is to create a sorted array. then compare the parity to the original. if it matches for all cases --> good. else NO
+
+
+new approach:
+
+we can have normal array and a sorted array. when we take in the input, we make a copy of it and sort it. then we compare if the sorted array %2 = normal array. because this test checks if its odd or even. if the whole row of odd even mix is exactly same as sorted array, then it is solvable. 
+
+to do so we can build a bool function that returns true if a_sorted % 2 = a, and return false otherwise. Since we are going to duplicate a and sort the duplicate, we need to use pass by reference. 
+
+in the main function we take in the input, then we run the bool function. if bool function return true, then cout Yes else no. we can use ternary operator to do it 
