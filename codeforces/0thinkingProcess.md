@@ -267,3 +267,23 @@ we can have normal array and a sorted array. when we take in the input, we make 
 to do so we can build a bool function that returns true if a_sorted % 2 = a, and return false otherwise. Since we are going to duplicate a and sort the duplicate, we need to use pass by reference. 
 
 in the main function we take in the input, then we run the bool function. if bool function return true, then cout Yes else no. we can use ternary operator to do it 
+
+
+# 1843B Long Long (800)
+
+Another greedy two poiunter qn
+
+this qn is very cursed also i think i need more practise. 
+
+whole row of negative including 0 --> only one action needed
+
+convert all to positive seperate array and compare. 
+
+if + surrounded by - --> change to - first, then change the whole row to + (2 step)
+
+if - surrounded by + --> change to + (1 step)
+
+actually there is a simpler way we can just count no. of contigous negatives.
+
+if number < 0, then start neg segment. so it is when number is negative, and if not in negative segment, then start + counter s. and set neg to true. then it moves on. if it meets positive number, then neg turns false. 
+
