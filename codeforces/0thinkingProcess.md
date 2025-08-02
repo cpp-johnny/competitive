@@ -192,12 +192,12 @@ else cout NO
 
 since the qn says brute force i will try to list out all possible:
 
-a + b*c
-a*b + c
-a * (b + c)
-(a + b) * c
-a * b * c
-a + b + c
+1. a + b*c
+2. a*b + c
+3. a * (b + c)
+4. (a + b) * c
+5. a * b * c
+6. a + b + c
 
 
 # 579A Counting Bacteria (1000)
@@ -220,3 +220,19 @@ To do so we just decompose the number into its binary.
 # 339A Helpful Maths (800)
 
 string s. create vector x where all the digits are at. for all character in s, add any non `+` into x, which are the numbers. then sort the numbers. then cout x and +. note this mistake --> dont just cout x, `+`. else will end up with 1+2+3+. so check if current index is size -1 which is last index, if it is wont cout the `+`. 
+
+
+# 1791C Prepend and Append (800)
+
+My first two pointer qn.
+
+From what i understand, the beginning can be either 0s and 1s or nothing. Then either add 1 to left and 0 to right, or 0 to left and 1 to right, or nothing at all. 
+
+1011011010 --> begin with 1011 left 101 right 010
+
+101010  --> begin with nothing --> left 101 right 010
+
+
+My approach weill be 
+
+as long as left no. != right number, then ignore. when reach when left no. = right no. then we print length of remaining 
