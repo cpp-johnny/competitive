@@ -303,3 +303,24 @@ add charcter
 output r
 
 take note in this example y is considered a vowel also lmao
+
+
+# 230A Dragons (1000)
+
+no. of dragons = n
+
+player initial strength = s
+
+dragon stregnth = x
+
+dragon bonus = y
+
+check if s > any of the x. if no --> NO else:
+
+slayed counter = w
+
+if s > x_n, then ++w, s + y_n. repeat until either w = n or cannot proceed anymore.
+
+we can sort by smallest x? 
+
+we can use pairs for this!
