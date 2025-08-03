@@ -287,3 +287,19 @@ actually there is a simpler way we can just count no. of contigous negatives.
 
 if number < 0, then start neg segment. so it is when number is negative, and if not in negative segment, then start + counter s. and set neg to true. then it moves on. if it meets positive number, then neg turns false. 
 
+
+# 118A String Task (1000)
+
+initialise emptyt output r
+
+for every charc in s, tolower() it.
+
+if char a | e | i | o | u : skip
+
+add . 
+
+add charcter
+
+output r
+
+take note in this example y is considered a vowel also lmao
