@@ -324,3 +324,27 @@ if s > x_n, then ++w, s + y_n. repeat until either w = n or cannot proceed anymo
 we can sort by smallest x? 
 
 we can use pairs for this!
+
+
+# 1690D Black and White Stripe (1000)
+
+This qn can be solved using fixed size sliding window.
+
+    l of strip of paper = n 
+
+    k consecetuvie black
+
+    t --> no. of tyest case
+
+
+eg. n=5 k=3, BBWBW. min = BBBBW --> 1 move
+
+eg. n=5 k=1, BBWBW. min = BBWBW  --> 0. 
+
+Idea: most amount of B in a segment --> easier and more direct to find least W in the segment, as we need to change the W. 
+
+size of window = k. from index 0 to index k, count W. save to min_W. then move to the next. we only update min_W when we find the least W. 
+
+we should do a sliding window appraoch as it is faster. --> if the previous was W, --W_count. If the current one is W, then ++W_Count.
+
+first we do index 0 to k. thats the first wibdow. then we do for the rest. this is to avoid having nk runtime. 
