@@ -2,7 +2,7 @@
 
 All my solutions to codeforces, codebreakerxyz, kattis, cses and project euler. I will try my best to attempt it all in C++
 
-At the beginning of each directory there will be a markdown file tittled `0thinkingProcess.md` which documments my thinking process and planning/learning points when doing the questions. 
+At the beginning of each directory there will be a markdown file tittled `0thinkingProcess.md` which documments my thinking process/planning and learning points when doing the questions. 
 
 If you find any errors or would like to suggest more efficient/better solutions, feel free to make a pull request!
 
