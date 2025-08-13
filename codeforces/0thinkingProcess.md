@@ -348,3 +348,10 @@ size of window = k. from index 0 to index k, count W. save to min_W. then move t
 we should do a sliding window appraoch as it is faster. --> if the previous was W, --W_count. If the current one is W, then ++W_Count.
 
 first we do index 0 to k. thats the first wibdow. then we do for the rest. this is to avoid having nk runtime. 
+
+
+# 2126A Only One Digit (800)
+
+find the smallest number in the digits 
+
+convert to string to sort. then take index 0. then convert back to int. 
