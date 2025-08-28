@@ -43,3 +43,8 @@ just doing normal recursion is too slow.
 
 also the qn said `You will be asked to output fi for every i from 0 to N. As Fibonacci numbers can be very big, you must output them modulo 998244353.` bruh lmao was wondering why keep getting wrong answer. 
 
+
+# 13. flamethrower
+
+sliding window problem
+
