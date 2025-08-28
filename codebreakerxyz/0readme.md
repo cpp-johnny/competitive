@@ -9,7 +9,7 @@ The question numbers are sorted by #ACs based on the site.
 I will skip the workings for questiuons that are too easy. 
 
 
-# 8 Lunch Box 
+# 8. Lunch Box 
 
 N to distriubute to m schools
 
@@ -24,4 +24,22 @@ max schools
 3 + 4 + 2 =  9 < 10 so 3. 
 
 greedy appraoch --> save all into a list, sort smallesty to largest. add until exceed n. print size of list.
+
+
+# 10. GCD
+
+we can use Euclidean algorithm.
+
+gcd(a, b) = gcd(b, a % b)
+
+Eventually the remainder becomes 0, and the other number is the gcd. Keep reducing until b is zero. Replace b with the remainder of dividing a by b. Replace a with the old value of b. This is equivalent to swapping (a, b) → (b, a % b).
+
+
+# 12. fibo
+
+Subtask 2: Too Long Execption
+
+just doing normal recursion is too slow. 
+
+also the qn said `You will be asked to output fi for every i from 0 to N. As Fibonacci numbers can be very big, you must output them modulo 998244353.` bruh lmao was wondering why keep getting wrong answer. 
 
