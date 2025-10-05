@@ -60,3 +60,19 @@ for closest element that is <= x:
     m = (l + r) /2 (middle)
 
 we return l+1 because remmeber we are using l = -1 index for neg infinity. 
+
+## C Closest to the Right
+
+    n = length of the array 
+    k =  the number of queries
+
+    l = left
+    r = right
+    m = (l + r) /2 (middle)
+
+we return r+1 because remmeber we are using r = n for pos infinity. 
+
+
+## D. Fast search
+
+first, we sort the array accendingly. then we use binary sort to find pos of l and r which is given. so in this case, we have 2 'x's equivalenet. then we minus off their index to find total number of numbers.
