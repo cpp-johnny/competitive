@@ -355,3 +355,11 @@ first we do index 0 to k. thats the first wibdow. then we do for the rest. this 
 find the smallest number in the digits 
 
 convert to string to sort. then take index 0. then convert back to int. 
+
+# 2172A ASCII Art Contest (800)
+
+original thought process:
+
+create list, put 1 in. then see if 2 > or < 1, then add behind/forward. do for 3 also. check if abs(1-2) and abs(2-3) and abs(1-3) < 10. if true then output list[1], else cehck again. 
+
+but then realise we can take input as 3 var, then using min and max find the respective. if max - min >= 10 we know it will definitely be out of bounds --> chcekc again. 

@@ -76,3 +76,31 @@ we return r+1 because remmeber we are using r = n for pos infinity.
 ## D. Fast search
 
 first, we sort the array accendingly. then we use binary sort to find pos of l and r which is given. so in this case, we have 2 'x's equivalenet. then we minus off their index to find total number of numbers.
+
+note that you can do this
+
+```cpp
+int left = bsearch_l(a, L - 1);
+int right = bsearch_r(a, R + 1);
+```
+
+Shifts the boundaries outside the array
+
+this makes counting right - left - 1 safe for all edge cases, including queries smaller than the first element or bigger than the last element. eg L could be say index 0. if you L-1 then its at the neg infinity right. however it may not be necessary cos i alrdy do `int l = -1, r = a.size()`. 
+
+BTW you can of course cheat by using the STL lower and upper bound but this goal is to practise binary search 
+
+
+# Step 2
+
+## Binary Search for Answer
+
+sort into 2 groups - good and bad
+
+given the property: if x is good, then x + 1 is also good. 
+
+the task is to find the min no. of good number
+
+let f be a function that returns 1 if good and 0 if bad. 
+
+so the number line could look something like this: `0 0 0 0 0 1 1 1 1 1 1 1` because every number after the first good number will be good by default based on the property. the task is to find the index of the first good number. 
