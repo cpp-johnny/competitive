@@ -364,7 +364,7 @@ create list, put 1 in. then see if 2 > or < 1, then add behind/forward. do for 3
 
 but then realise we can take input as 3 var, then using min and max find the respective. if max - min >= 10 we know it will definitely be out of bounds --> chcekc again. we can run sort() for this since is only 3 things to sort. 
 
-# 2167B B Your Name (800)
+# 2167BB Your Name (800)
 n cubes arranged forming string s. 
 name is string t, consist of n leters.
 
@@ -377,3 +377,9 @@ compare number letters of each side.
 while q --, int n, str a, b. split a into n numbers, compare b. 
 
 solutiuon 1: ascii index manipulation: since `a=97`, `b=98`, `c=99`..., we can just subtract whatver our current chracter is with say erxample `a` and it gives the difference, then we can ddeduce. first we create empty array from a to z, then we run for every char in string s, we minus off a. then we run through string t, and we plus. then we see if any remainder. be3cause say eg letter is `abd`, then will be `s: 0, 1, 0, 3`. The index != 0 means have number. then we do for string t. if occur, then we add minus it off. eventually we can check if the end is all 0. if all 0 means total match. 
+
+# 2167A Square? (800)
+
+this qn damn ez
+
+cin t, cin a, b, c, d. if a == b == c == d, then yes, else no
