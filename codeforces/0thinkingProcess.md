@@ -364,8 +364,9 @@ create list, put 1 in. then see if 2 > or < 1, then add behind/forward. do for 3
 
 but then realise we can take input as 3 var, then using min and max find the respective. if max - min >= 10 we know it will definitely be out of bounds --> chcekc again. we can run sort() for this since is only 3 things to sort. 
 
-# 2167BB Your Name (800)
+# 2167B Your Name (800)
 n cubes arranged forming string s. 
+
 name is string t, consist of n leters.
 
 q is test case, follwoed by n 
@@ -383,3 +384,23 @@ solutiuon 1: ascii index manipulation: since `a=97`, `b=98`, `c=99`..., we can j
 this qn damn ez
 
 cin t, cin a, b, c, d. if a == b == c == d, then yes, else no
+
+# 2157A Dungeon Equilibrium (800)
+
+min no. of deletion to be balanced.
+
+original idea:
+
+since max numbers is 100 we can maybe still try frequency mappping
+
+c be changes needed. assign frequency = 0. for every occurance we add. then for each in the array say for i in range c+= i-arr[i]. then cout c. 
+
+BUT then realise also it mentions exact mapping x occurance for x so eg x=3 need 3 of 3 else must delete it if less. say only got one 3 then we need to delete that one 3. 
+
+we can use unordered map to store the frequencies. recap of unordered_map cos my brain hazed and died after not doing this for months: when you do unorderedmap<int, int> cnt, it creates nothing at first. then you run for everything inside a the vector we take the number as the first int space. then for the second int we do the ++c[x] which basically means +1 to whicher number it belong. so at first theres nothing. so <,>. if 1 comes up, then it becomes <1,>. then it +1 to that key which is "1" so it adds to <1,1> so now if the next nymber is 1 again, it adds to the so called frequency or the value of the key "1" so now it is <1,2>.
+
+we use underordered map becasue it stores numbners that exists, unlike using a frequency array. but this test case is only 100 so technically wont affect much. 
+
+create UM c where it takes in x from vector n. then it does +=c[x] which is +1 for everytime it the unique key exists. 
+
+let deletions needed d = 0. for every number in map c, we let x be the x and y be the freqwunecy. if freqwuncyt < number, then impossible to hit, then we add the freq of this nmumber into d since we need to dewelte y numbers of this number. else we do freq-number to see how much to cut off. this workjs because if x=y then it will be 0 and nothjing addded to d. 
