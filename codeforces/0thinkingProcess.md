@@ -404,3 +404,37 @@ we use underordered map becasue it stores numbners that exists, unlike using a f
 create UM c where it takes in x from vector n. then it does +=c[x] which is +1 for everytime it the unique key exists. 
 
 let deletions needed d = 0. for every number in map c, we let x be the x and y be the freqwunecy. if freqwuncyt < number, then impossible to hit, then we add the freq of this nmumber into d since we need to dewelte y numbers of this number. else we do freq-number to see how much to cut off. this workjs because if x=y then it will be 0 and nothjing addded to d. 
+
+# 2157B Expansion Plan 2 (900)
+
+Bruh i absoleult havbe no idea how to do this so i am stealingf the solution from ksun48 who seems to be the first to do it. I have no idea how this is 900 i mighjt actually be strupid 
+
+4 -> UDLR (Manhattan distance +1) while 8 --> UDLR+Diagonal (Chebyshev distance +1). 
+
+Insight: each step depends only on the type of expansion, not the specific coordinates of existing black cells.
+
+Manhattan distance: abs(x1-x2) + abs(y1-y2) and Chebyshev distance: max(abs(x1-x2), abs(y-2))
+
+ok so i made a drawing of it to better understand. ![](2157B.png) 
+
+
+let n4 = number of "4" operations and n8 = number of "8" operations. 
+
+then we take the absolute value of x and y since the problem is symmetric around the origin.
+
+The largest coordinate (either X or Y) is the farthest distance along any axis → Chebyshev distance. 
+
+Each "4" or "8" can move 1 step along one axis at least. So the farthest axis cannot be farther than all your steps combined → max(X,Y) <= n4 + n8. Example: (X,Y) = (5,3), n4=3, n8=2. max(X,Y) = 5. n4+n8 = 3+2 = 5 ✅ reachable. If max(X,Y) > n4+n8 → impossible → "NO"
+
+"4" moves contribute 1 step each → increase Manhattan distance by 1 and "8" moves contribute 2 steps each → because diagonal = moves in both x and y. So the total distance you can cover = n4 + 2*n8. Example: (X,Y) = (3,3), n4=1, n8=2. Total Manhattan distance needed = 3+3 = 6. Maximum distance reachable = 11 + 22 = 5 → cannot reach → "NO".
+
+Essentially  we break it down into x and y coordinate. a 8 will give 2 moves due to diagonals. so youre summing up all the moves in 1 direction and comparing agains the larrgest of trhe given coordinate to estavbluish it reaces the corner. 
+
+Qn so if thats the case wont the n4 + 2*n8 be enbough alrdy, why need conpare (n4 + n8).
+
+Ans: X+Y <= n4 + 2*n8 → total distance reachable → Manhattan distance check
+
+- X+Y <= n4 + 2*n8 → total distance reachable → Manhattan distance check
+- max(X,Y) <= n4 + n8 → ensures you can reach the farthest coordinate along one axis → Chebyshev distance check
+
+AKA n4+2\*n8 is the x/y only, while n4+n8 is the diagonal. sometimes diagonal satisfied, but xy is not. Example: (X,Y) = (5,0) and n4 = 0, n8 = 3. so for horizontal/vertical --> 0+3=3 (not enough), but if do diagonal 0+2\*3=6 (seemingly enough). So we need check both. 
