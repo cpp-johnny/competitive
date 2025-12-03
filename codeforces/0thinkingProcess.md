@@ -438,3 +438,31 @@ Ans: X+Y <= n4 + 2*n8 → total distance reachable → Manhattan distance check
 - max(X,Y) <= n4 + n8 → ensures you can reach the farthest coordinate along one axis → Chebyshev distance check
 
 AKA n4+2\*n8 is the x/y only, while n4+n8 is the diagonal. sometimes diagonal satisfied, but xy is not. Example: (X,Y) = (5,0) and n4 = 0, n8 = 3. so for horizontal/vertical --> 0+3=3 (not enough), but if do diagonal 0+2\*3=6 (seemingly enough). So we need check both. 
+
+# 2356A Pizza Time (800)
+
+n pizza. if <= 2 then alex. 
+
+if not --> m whewre m>=3 and m1+m2+m3=m and 1<=m1<=m2<=m3.
+
+Hao eats m1 and alex eats m2. then m3 is carried over to next day. split so hao eat the most. strat is to let m1m2m3 to be as near as possible and if multiple of 3, then we set them to be all the same. 
+
+now i am thinking if the strat is to keep m1 and m2 the same. but will it be better tho. see if m=8 and m1=2, m2=2, m3=4 --> Hao (2), carry over next day is 4 --> new m1=1, new m2=1, new m3=2, total is still 3. Compared to case study of m1=2, m2=3, m3=3 then new day m1=1, m2=1, m3=1 so total still 3. 
+
+so we can test it by running for eg m=10. so we get 
+
+    1. Case 1
+        - 3 3 4
+        - 1 1 2
+    total 4
+
+    2. Case 2
+        - 1 1 8
+        - 1 1 6
+        - 1 1 4
+        - 1 1 2
+    total also 4
+
+so we have established that it doesnt matter. 
+
+so we can maybe do / and % to get the base and remainder. 
