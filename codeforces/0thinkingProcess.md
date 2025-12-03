@@ -466,3 +466,26 @@ so we can test it by running for eg m=10. so we get
 so we have established that it doesnt matter. 
 
 so we can maybe do / and % to get the base and remainder. 
+
+# 2171A Shizuku Hoshikawa and Farm Legs (800)
+
+lol this is primary school math btw
+
+let c be chicken and w be cow legs --> 2c + 4w = n. 
+
+dividing by 2, we get c + 2w = m. if n is odd m will not be an int, so immediate out. 
+
+express c in terms of w 
+
+$c = m - 2w. $
+
+since $c >= 0$, 
+$m - 2w >= 0. $
+
+$m >= 2w$
+
+$ w <= m/2$
+
+so $ w = 0, 1, 2, ... , m/2$.
+
+we add $1$ because total number starts from 0. 
