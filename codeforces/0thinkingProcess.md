@@ -493,3 +493,11 @@ we add $1$ because total number starts from $0$.
 # 1996A Legs (800)
 
 try maximise for 4 leg. since all are 2 or 4, so we can just /4 to get the no. of 4 leg and remainder will be 2 leg. so if there any 2 leg (which will be one) --> then we ++ans. to check for that we see if n % 4 = 0. if = 0 then no two leg, else there will be a two leg. 
+
+# 2166A Same Difference
+
+s length n of letters
+
+select int `i` where `1 <= i < n` to change the lettter to the one behind it. min operation to make all same. 
+
+the strat is just check for char in string count number of the string[-1]. we let that be say x. then to count no. of operation is just n-x.
