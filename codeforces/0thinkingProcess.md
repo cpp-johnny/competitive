@@ -484,8 +484,12 @@ $m - 2w >= 0. $
 
 $m >= 2w$
 
-$ w <= m/2$
+$w <= m/2$
 
-so $ w = 0, 1, 2, ... , m/2$.
+so $w = 0, 1, 2, ... , m/2$.
 
-we add $1$ because total number starts from 0. 
+we add $1$ because total number starts from $0$. 
+
+# 1996A Legs (800)
+
+try maximise for 4 leg. since all are 2 or 4, so we can just /4 to get the no. of 4 leg and remainder will be 2 leg. so if there any 2 leg (which will be one) --> then we ++ans. to check for that we see if n % 4 = 0. if = 0 then no two leg, else there will be a two leg. 
