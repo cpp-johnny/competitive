@@ -501,3 +501,48 @@ s length n of letters
 select int `i` where `1 <= i < n` to change the lettter to the one behind it. min operation to make all same. 
 
 the strat is just check for char in string count number of the string[-1]. we let that be say x. then to count no. of operation is just n-x.
+
+# 2160A MEX Partitions
+
+find the MEX which is smallest no. not in the partition. 
+
+just create something that stores only unique elemets such as unordered set. --> then we can find the missing. 
+
+i used unordered_set for this, but you can also use underordered_map and vector_bool for it.
+
+Example in vector_bool
+
+```cpp
+int t; cin >> t;
+    while (t--) {
+        int n; cin >> n;
+        vector<bool> exists(101, false); // store presence of numbers 0..100
+        for (int i = 0; i < n; ++i) {
+            int x; cin >> x;
+            exists[x] = true;
+        }
+
+        int mex = 0;
+        while (exists[mex]) ++mex;    // if freq = 0 then it wont exist so no ++ then break cycle. 
+        cout << mex << "\n";
+```
+
+or another example:
+
+```cpp
+int t; cin>>t;
+while(t--){
+    int n; cin>>n;
+    vector<int> fr(101,0);    // initial val is 0
+    for(int i=0;i<n;i++){
+        int x; cin>>x;
+        fr[x]++;
+    }
+    for(int i=0;i<=100;i++){
+        if(fr[i]==0){    // cout the first instance where frequcny = 0 == dont exist
+            cout<<i<<"\n";
+            break;
+        }
+    }
+}
+```
