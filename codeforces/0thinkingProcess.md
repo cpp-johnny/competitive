@@ -634,3 +634,8 @@ Think of it like placing guards along the string: Scan from left to right. If we
 From the editiorial:
 
 If there is a subarray containing k−1 zeros, then the next element cannot be prevented from being hit. So any time we see k−1 zeros follwed by a one then the one must be protected. From Hint 1, lets protect every 1 that fits the pattern. Furthermore we should always protect the first 1 in the string so lets do that. It turns out that this is all that we need to do, to prove this think inductively: every element that is not protected will always have a 1 in the last k−1 elements and so it will be unchanged. So to solve the problem we can check the distance between each consecutive 1, if the gap is at least k then add 1 to the answer. Final time complexity O(n).
+
+
+simplyfing:
+
+note that we always protect the first 1 because for somne fucking reason by the rules or sonme shit the k-1 in front means numbers before the first index and they dont even exist so the "dont contain 1" is satisfied tf. Anyways, we want to find all the 1s that are outside of the range. the range being the current 1 - the last 1 must be < k. else it needs to be protected. We need something to always keep track of the last "1". and also if the current 1 is more than k away from the last, we need to protect it. so we can count that +1. then we sum up the total no. that needs to be protected. Lowkey this is a bum ass qn its not even two pointer qn it just tracks 2 positions. 
