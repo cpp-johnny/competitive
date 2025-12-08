@@ -494,7 +494,7 @@ we add $1$ because total number starts from $0$.
 
 try maximise for 4 leg. since all are 2 or 4, so we can just /4 to get the no. of 4 leg and remainder will be 2 leg. so if there any 2 leg (which will be one) --> then we ++ans. to check for that we see if n % 4 = 0. if = 0 then no two leg, else there will be a two leg. 
 
-# 2166A Same Difference
+# 2166A Same Difference (800)
 
 s length n of letters
 
@@ -502,7 +502,7 @@ select int `i` where `1 <= i < n` to change the lettter to the one behind it. mi
 
 the strat is just check for char in string count number of the string[-1]. we let that be say x. then to count no. of operation is just n-x.
 
-# 2160A MEX Partitions
+# 2160A MEX Partitions (800)
 
 find the MEX which is smallest no. not in the partition. 
 
@@ -591,3 +591,46 @@ The number of 1s among (x_i, y_i, z_i) must be 0, 1, or 3. It CANNOT be exactly 
 To find the no, we check if at the ith position there exist excactly two "1"s --> then it will not happen --> NO.
 
 To solve we just grab the bit and perform `&1` to get the ans. if is 0 then that bit is 0, if 1 means its 1. We compare the ith bit for x,y,z and sum up to see if its 0,1,3 or 2, with 2 being a NO. we use right shift `>>` to get it to `& 1`. loop thorugh to ensure all is at same index. 
+
+# 2154A Notelock (800)
+
+I HATE THIS QN WTFFFFF
+
+string s length n 
+
+pos int k. 
+
+choose a position in s to protect
+
+for the num s_i he pick, he can set the val to 0 if s_i = 1 & not protected & and previous k-1 elements dont contain `1`.
+
+Min position to protect to leave s unchanged. 
+
+    n = 2, k = 2, s = 11
+    k - 1 = 1. 
+    <1> 1 --> 1 because first the 0th number dont contain 1. 
+
+    n = 6, k = 6, s = 100001
+    k - 1 = 5
+    <1> 0 0 0 1 --> 1
+
+    n = 7, k = 4, s = 1001001
+    k - 1 = 3
+    <1> 0 0 1 0 0 1 --> 1
+
+    n = 7, k = 2, s = 1010101
+    k - 1 = 1
+    <1> 0 <1> 0 <1> 0 <1> --> 4
+
+The idea is:
+
+Teto can flip a 1 if the previous k-1 positions don’t contain a 1. So, if we protect certain 1s, we can “block” Teto from flipping others.
+
+The greedy insight: we want to protect the first vulnerable 1, then skip the next k-1 positions because Teto cannot flip 1s that are within k-1 distance from a protected 1.
+
+Think of it like placing guards along the string: Scan from left to right. If we encounter a 1 that is outside the “safe zone” of the last protected 1 → we must protect it. Then, this protection covers the next k-1 positions from Teto flipping.
+
+
+From the editiorial:
+
+If there is a subarray containing k−1 zeros, then the next element cannot be prevented from being hit. So any time we see k−1 zeros follwed by a one then the one must be protected. From Hint 1, lets protect every 1 that fits the pattern. Furthermore we should always protect the first 1 in the string so lets do that. It turns out that this is all that we need to do, to prove this think inductively: every element that is not protected will always have a 1 in the last k−1 elements and so it will be unchanged. So to solve the problem we can check the distance between each consecutive 1, if the gap is at least k then add 1 to the answer. Final time complexity O(n).
