@@ -514,17 +514,17 @@ Example in vector_bool
 
 ```cpp
 int t; cin >> t;
-    while (t--) {
-        int n; cin >> n;
-        vector<bool> exists(101, false); // store presence of numbers 0..100
-        for (int i = 0; i < n; ++i) {
-            int x; cin >> x;
-            exists[x] = true;
-        }
+while (t--) {
+    int n; cin >> n;
+    vector<bool> exists(101, false); // store presence of numbers 0..100
+    for (int i = 0; i < n; ++i) {
+        int x; cin >> x;
+        exists[x] = true;
+    }
 
-        int mex = 0;
-        while (exists[mex]) ++mex;    // if freq = 0 then it wont exist so no ++ then break cycle. 
-        cout << mex << "\n";
+    int mex = 0;
+    while (exists[mex]) ++mex;    // if freq = 0 then it wont exist so no ++ then break cycle. 
+    cout << mex << "\n";
 ```
 
 or another example:
@@ -546,3 +546,48 @@ while(t--){
     }
 }
 ```
+
+# 2153B Bitwise Reversion (800)
+
+non-neg; x, y, z, a, b, c
+
+    x = a & b 
+    y = b & c 
+    z = a & c 
+
+e.g. 1 1 1 --> a = 3, b = 5, c = 9 is the sol. 
+
+    3: 0000000000000011
+    5: 0000000000000101
+    9: 0000000000001001
+
+since the operator is `&`, we can work on each bit seperately.
+
+therefore, 
+
+    a_i & b_i = x_i
+    b_i & c_i = y_i
+    a_i & c_i = z_i
+
+where each of $a_i, b_i, c_i ∈ {0,1}$.
+
+Key observation: If a particular bit is 1 in ANY of x, y, or z, then its corresponding a/b/c will need to be 1 as well. 
+
+    For x_i = 1 → a_i = 1 AND b_i = 1
+    For y_i = 1 → b_i = 1 AND c_i = 1
+    For z_i = 1 → a_i = 1 AND c_i = 1
+
+So whenever one of x_i, y_i, z_i is 1, it forces two of (a_i, b_i, c_i) to be 1.
+
+Key observation 2: if 2 of x_i, y_i, z_i are 1, then:
+
+    x_i = 1 → a_i = b_i = 1
+    y_i = 1 → b_i = c_i = 1
+
+then automatically a_i = c_i = 1 → so z_i must also be 1.
+
+The number of 1s among (x_i, y_i, z_i) must be 0, 1, or 3. It CANNOT be exactly 2.
+
+To find the no, we check if at the ith position there exist excactly two "1"s --> then it will not happen --> NO.
+
+To solve we just grab the bit and perform `&1` to get the ans. if is 0 then that bit is 0, if 1 means its 1. We compare the ith bit for x,y,z and sum up to see if its 0,1,3 or 2, with 2 being a NO. we use right shift `>>` to get it to `& 1`. loop thorugh to ensure all is at same index. 
