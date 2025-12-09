@@ -659,3 +659,28 @@ e.g. for 0110 --> 0011
     <1> <1> 0 1 0 <0> -->  0 <1> 0 <1> <0> 1 --> 0 0 0 1 1 1 
 
 realise if one nmumber is at a wrong place, it wioll have a mismatched pair. say eg `1 0 1 0 1 1` --> the second 0 is too far back. it will have a corresponding number that should be in its place aka the first 1 in this case. so we alwatys have a pair of number. so for our ans, it is always the mismatched count / 2. 
+
+
+# 2143A All Lengths Subtraction
+
+permutation p length n
+
+one operation for each int k from 1 to n
+
+choose subarray of p of length k and subtract 1 from every element --> so subarray length 1, then 2, then ... until n
+
+goal aftewr n operations: all to be 0.
+
+eg `1 3 4 2` --> `1 3 3 2` --> `1 2 2 2` --> `1 1 1 1` --> `0 0 0 0`
+
+ `2 4 5 3 1` --> `2 4 4 3 1` --> `2 3 3 3 1` --> `2 2 2 2 1` --> `1 1 1 1 1` --> `0 0 0 0 0`
+
+
+orighinal obersvation wchich is wrnog:
+observe that the max number will be near the center. then the numbers wrapping around it must be alternate. eg 4 5 3 or 3 5 4. 
+
+so we find size of array --> if odd we /2, if even we aslo /2 but check if the half or the half+1 is bigger. then we do pointer left and right see if |mid - mid+1| and |mid - mid-1| == 1. if true then continue. else "NO"
+
+but realise thats not true. eg `1 2 3 4` can be valid also and the max is not at center. 
+
+the correct way is to find the index of max, then set expected = n -1. then walk L & R. if left elemetnn = expected, walk left, else if right element = expected, mopve right, else no. and decrease expected by 1 and repeat until 1.  if read ends and expecxted to reach 0 then valid. 
