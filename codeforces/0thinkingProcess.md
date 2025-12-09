@@ -639,3 +639,23 @@ If there is a subarray containing k−1 zeros, then the next element cannot be p
 simplyfing:
 
 note that we always protect the first 1 because for somne fucking reason by the rules or sonme shit the k-1 in front means numbers before the first index and they dont even exist so the "dont contain 1" is satisfied tf. Anyways, we want to find all the 1s that are outside of the range. the range being the current 1 - the last 1 must be < k. else it needs to be protected. We need something to always keep track of the last "1". and also if the current 1 is more than k away from the last, we need to protect it. so we can count that +1. then we sum up the total no. that needs to be protected. Lowkey this is a bum ass qn its not even two pointer qn it just tracks 2 positions. 
+
+# 2140A SHift Sort
+
+string s length n
+
+choose 3 indices `1<=i<j<k<=n` and left/right shift cyclically. ijk can be any position. 
+
+why does it start from index 1 and not 0 lmao
+
+    e.g. 110110
+    rightshift where i = 1, j = 2, k = 3 (110) --> (011) 011110
+    leftshift where i = 4, j = 5, k = 6 (110) --> (101) 110101
+
+determine min. operations to sort to get 0 on left and 1 on right
+
+e.g. for 0110 --> 0011
+
+    <1> <1> 0 1 0 <0> -->  0 <1> 0 <1> <0> 1 --> 0 0 0 1 1 1 
+
+realise if one nmumber is at a wrong place, it wioll have a mismatched pair. say eg `1 0 1 0 1 1` --> the second 0 is too far back. it will have a corresponding number that should be in its place aka the first 1 in this case. so we alwatys have a pair of number. so for our ans, it is always the mismatched count / 2. 
