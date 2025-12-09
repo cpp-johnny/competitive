@@ -684,3 +684,18 @@ so we find size of array --> if odd we /2, if even we aslo /2 but check if the h
 but realise thats not true. eg `1 2 3 4` can be valid also and the max is not at center. 
 
 the correct way is to find the index of max, then set expected = n -1. then walk L & R. if left elemetnn = expected, walk left, else if right element = expected, mopve right, else no. and decrease expected by 1 and repeat until 1.  if read ends and expecxted to reach 0 then valid. 
+
+
+# 2140B Another Divisibility Problem
+
+given x find y to solve: x # y must be divisiable by x + y. 
+
+eg x = 8. y can be 1 so that 81/(8+1)=9.
+
+$x\#y = x⋅10^m+y=x⋅(10^m−1)+(x+y)$.
+
+for $x\#y$ be divisable by $x+y$, $x⋅(10^m−1)$ must be a factor of $x+y$. 
+
+$(x+y) \text{ must divide } x \cdot (10^m - 1)$
+
+$3x$ is definiteily a factor of $x⋅(10^m−1)$. so $x + y = 3x$, then $y = 2x$. 
