@@ -699,3 +699,8 @@ for $x\#y$ be divisable by $x+y$, $x⋅(10^m−1)$ must be a factor of $x+y$.
 $(x+y) \text{ must divide } x \cdot (10^m - 1)$
 
 $3x$ is definiteily a factor of $x⋅(10^m−1)$. so $x + y = 3x$, then $y = 2x$. 
+
+
+# 2162A Beautiful Average
+
+? isnt this just output largest number lmao.
